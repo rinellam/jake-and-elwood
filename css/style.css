@@ -98,6 +98,10 @@ header, main, footer {
     grid-row: auto;
 }
 
+main, footer {
+    padding: 1em 2em 2em 2em;
+}
+
 header {
     padding: 2em 0 3.5em 2em;
     background: #000000;
@@ -105,10 +109,6 @@ header {
         "header-text"
         "subhead-text"
         "btn";
-}
-
-main, footer {
-    padding: 1em 2em 2em 2em;
 }
 
 main {
@@ -170,4 +170,98 @@ footer {
 /* button */
 .btn {
     background: dodgerblue;
+}
+
+/* ============
+media queries 
+============ */
+
+@media (min-width: 600px) {
+
+    header, main, footer {
+        display: grid;
+        grid-column: 1fr 1fr 1fr;
+        grid-row: auto;
+    }
+
+    main {
+        grid-template-areas: 
+            "copy-title-text copy-title-text copy-title-text" 
+            "main-copy main-copy main-copy";
+    }
+
+    footer {
+        grid-template-areas: 
+        "footer-logo-text" "social-icons"
+        "footer-copy"
+        "description-text";
+    }
+
+    /* typograpgy */
+
+    .header-text {
+        font-size: 2rem;
+        width: 33%;
+    }
+    
+    .subhead-text {
+        font-size: 1.50rem;
+        width: 33%;
+    }
+
+    .copy-title-text {
+        font-size: 1.35rem;
+    }
+
+    .main-copy {
+        padding: 0 5em 2em 5em;
+        font-size: 1.25rem;
+    }
+
+    .footer-copy {
+        text-align: left;
+        width: 33%;
+    }
+
+    /* layout */
+
+    header {
+        padding: 5em 0 6.5em 5em;
+    }
+
+    main, footer {
+        padding: 4em 5em 5em 5em;
+    }
+
+    .footer-logo-text {
+        align-self: start;
+        justify-self: start; 
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    .social-icons {
+        align-self: start;
+        justify-self: end;
+        grid-column: -1;
+        grid-row: 1;
+    }
+
+    .fab {
+        margin: 1em .25em 0 .25em;
+    }
+
+    .footer-copy {
+        align-self: start;
+        justify-self: start; 
+        grid-column: 1 / 2;
+        width: 33%;
+    }
+
+    .description-text {
+        align-self: start;
+        justify-self: start; 
+        grid-column: 1 / 2;
+    }
 }
