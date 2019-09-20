@@ -1,0 +1,145 @@
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+
+*/
+
+
+body, html {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+}
+
+/* ============
+typography
+============= */
+
+h1 {
+    font-size: 2rem;
+}
+
+.footer-logo-text {
+    color: #707070;
+}
+
+.header-text {
+    font-size: 1.55rem;
+    max-width: 66%;
+}
+
+.subhead-text {
+    font-size: 1.35rem;
+    max-width: 66%;
+}
+
+.btn-text {
+    font-size: 1.25rem;
+}
+
+.copy-title-text {
+    font-size: 1.25rem;
+}
+
+.description-text {
+    font-size: .75rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.fab {
+    font-size: 1.5rem;
+    margin-right: .5em;
+}
+
+.header-text,
+.subhead-text,
+.btn-text {
+    color: #fff;
+}
+
+
+/* ============
+layout
+============= */
+
+header, main, footer {
+    padding: 1em;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: auto;
+}
+
+header {
+    padding-bottom: 3em;
+    background: #000000;
+    grid-template-areas: 
+        "header-text"
+        "subhead-text"
+        "btn";
+}
+
+main {
+    grid-template-areas: 
+        "copy-title-text"
+        "copy-title-text" 
+        "copy-title-text";
+}
+
+footer {
+    background: #D8D8D8;
+    grid-template-areas: 
+        "social-icons"
+        "footer-logo-text"
+        "footer-copy"
+        "description-text";
+}
+
+/* grid template areas */
+.header-text {
+    grid-area: header-text;
+}
+
+.subhead-text {
+    grid-area: subhead-text;
+}
+
+.btn {
+    grid-area: btn;
+    padding: 0 1.25em;
+    justify-self: start;
+}
+
+.copy-title-text {
+    grid-area: main-text;
+}
+
+.fab {
+    grid-area: fab;
+    grid-column: 1 / -1;
+}
+
+.footer-logo-text {
+    grid-area: footer-logo-text;
+}
+
+.footer-copy {
+    grid-area: footer-copy;
+}
+
+.description-text {
+    grid-area: description-text;
+}
+
+/* button */
+.btn {
+    background: dodgerblue;
+}
