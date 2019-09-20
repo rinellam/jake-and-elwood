@@ -8,9 +8,11 @@ font-family: 'Ubuntu', sans-serif;
 
 body, html {
     margin: 0;
+    padding: 0;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     font-weight: 300;
+    color: #000;
 }
 
 h1 {
@@ -25,18 +27,18 @@ h1 {
     font-size: 2rem;
 }
 
-.footer-logo-text {
-    color: #707070;
+.logo-text {
+    font-weight: 400;
 }
 
 .header-text {
     font-size: 1.55rem;
-    max-width: 66%;
+    max-width: 60%;
 }
 
 .subhead-text {
-    font-size: 1.35rem;
-    max-width: 66%;
+    font-size: 1.25rem;
+    max-width: 60%;
 }
 
 .btn-text {
@@ -44,11 +46,21 @@ h1 {
 }
 
 .copy-title-text {
-    font-size: 1.25rem;
+    font-size: 1.20rem;
+}
+
+/* centered text */
+.main-copy,
+.copy-title-text,
+.footer-logo-text,
+.footer-copy,
+.description-text {
+    text-align: center;
 }
 
 .description-text {
     font-size: .75rem;
+    text-transform: uppercase;
 }
 
 strong {
@@ -56,14 +68,23 @@ strong {
 }
 
 .fab {
-    font-size: 1.5rem;
-    margin-right: .5em;
+    font-size: 1.75rem;
+    margin: .35em;
 }
+
+/* text colors */
 
 .header-text,
 .subhead-text,
 .btn-text {
     color: #fff;
+}
+
+.footer-logo-text, 
+.footer-copy,
+.description-text,
+.fab {
+    color: #707070;
 }
 
 
@@ -72,14 +93,13 @@ layout
 ============= */
 
 header, main, footer {
-    padding: 1em;
     display: grid;
     grid-column: 1fr;
     grid-row: auto;
 }
 
 header {
-    padding-bottom: 3em;
+    padding: 2em 0 3.5em 2em;
     background: #000000;
     grid-template-areas: 
         "header-text"
@@ -87,11 +107,18 @@ header {
         "btn";
 }
 
+main, footer {
+    padding: 1em 2em 2em 2em;
+}
+
 main {
     grid-template-areas: 
         "copy-title-text"
+        "main-copy"
         "copy-title-text" 
-        "copy-title-text";
+        "main-copy"
+        "copy-title-text"
+        "main-copy";
 }
 
 footer {
@@ -114,7 +141,7 @@ footer {
 
 .btn {
     grid-area: btn;
-    padding: 0 1.25em;
+    padding: 0 1.50em;
     justify-self: start;
 }
 
@@ -122,9 +149,10 @@ footer {
     grid-area: main-text;
 }
 
-.fab {
-    grid-area: fab;
+.social-icons {
+    grid-area: social-icons;
     grid-column: 1 / -1;
+    justify-self: center;
 }
 
 .footer-logo-text {
