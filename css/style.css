@@ -18,6 +18,16 @@ body, html {
     transition-delay: 200ms;
 }
 
+a {
+    color: dodgerblue;
+}
+
+a:hover, 
+a:focus {
+    color: #1873cc;
+}
+
+
 h1 {
     font-family: 'Lora', serif;
 }
