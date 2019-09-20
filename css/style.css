@@ -208,6 +208,13 @@ footer {
     background: #1873cc;
 }
 
+/* social icons */
+
+.fab:hover,
+.fab:focus {
+    color: #1873cc;
+}
+
 /* ============
 media queries 
 ============ */
