@@ -58,10 +58,12 @@ h1 {
     font-size: 1.25rem;
     max-width: 60%;
     line-height: 1.3;
+    font-weight: 400;
 }
 
 .btn-text {
     font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .copy-title-text {
@@ -116,7 +118,7 @@ strong {
 layout
 ============= */
 
-header, main, footer {
+header,  main, footer {
     display: grid;
     grid-column: 1fr;
     grid-row: auto;
