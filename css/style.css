@@ -24,7 +24,7 @@ a {
 
 a:hover, 
 a:focus {
-    color: #1873cc;
+    color: #00bfff;
 }
 
 
@@ -133,9 +133,10 @@ main {
 }
 
 header {
-    padding: 2em 0 3.5em 2em;
-    
+    padding: 0 0 3.5em 2em;
+
     grid-template-areas: 
+        "nav"
         "header-text"
         "subhead-text"
         "btn";
@@ -205,14 +206,14 @@ footer {
 
 .btn:hover,
 .btn:focus {
-    background: #1873cc;
+    background: #00bfff;
 }
 
 /* social icons */
 
 .fab:hover,
 .fab:focus {
-    color: #1873cc;
+    color: #00bfff;
 }
 
 /* ============
@@ -235,9 +236,9 @@ media queries
 
     footer {
         grid-template-areas: 
-        "footer-logo-text" "social-icons"
-        "footer-copy"
-        "description-text";
+        "footer-logo-text . social-icons"
+        "footer-copy . ."
+        "description-text . .";
     }
 
     /* typograpgy */
@@ -299,7 +300,6 @@ media queries
         align-self: start;
         justify-self: start; 
         grid-column: 1 / 2;
-        width: 33%;
     }
 
     .description-text {
